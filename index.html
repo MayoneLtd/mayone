@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayone Co., Ltd. — Software Company</title>
+    <meta name="description" content="Mayone Co., Ltd. is a technology company specializing in mobile apps, desktop software, and digital solutions across Apple and cross-platform ecosystems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 32V12L20 24L32 12V32" stroke="url(#logo_grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="logo_grad" x1="8" y1="12" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3b82f6"/>
+                            <stop offset="1" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">Mayone</span>
+            </a>
+            <ul id="nav-menu" class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">What We Do</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#contact" class="btn btn-outline btn-sm">Get in Touch</a></li>
+            </ul>
+            <button id="mobile-toggle" class="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Hero: Company Introduction -->
+        <section id="hero" class="hero">
+            <div class="hero-inner">
+                <p class="hero-label fade-in">Mayone Co., Ltd.</p>
+                <h1 class="hero-title fade-in">We build software<br>people <em>love</em> to use.</h1>
+                <p class="hero-subtitle fade-in">A technology company crafting high-quality mobile apps, desktop software, and digital experiences across the Apple ecosystem and beyond.</p>
+                <div class="hero-actions fade-in">
+                    <a href="#about" class="btn btn-primary">Learn About Us</a>
+                    <a href="#products" class="btn btn-ghost">Our Products</a>
+                </div>
+            </div>
+            <div class="hero-scroll-hint fade-in">
+                <div class="scroll-line"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-grid">
+                <div class="section-text fade-in">
+                    <p class="eyebrow">About Us</p>
+                    <h2>Technology with purpose.</h2>
+                    <p class="body-text">Mayone Co., Ltd. is an independent software company focused on building thoughtful, well-crafted digital products. We design and develop apps for iOS, macOS, and the web — tools that solve real problems with elegant, intuitive interfaces.</p>
+                    <p class="body-text">We believe great software comes from small, focused teams who care deeply about every pixel and every line of code. That philosophy drives everything we ship.</p>
+                </div>
+                <div class="section-image fade-in">
+                    <img src="assets/team.png" alt="Mayone team collaborating">
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="expertise-section">
+            <div class="section-header fade-in">
+                <p class="eyebrow">What We Do</p>
+                <h2>Our areas of expertise</h2>
+                <p class="section-desc">We specialize in end-to-end product development — from concept and design to engineering and release.</p>
+            </div>
+
+            <div class="expertise-grid">
+                <div class="expertise-card fade-in">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Native iOS and cross-platform mobile applications with premium UI/UX, built with Swift, SwiftUI, and modern architectures.</p>
+                </div>
+                <div class="expertise-card fade-in" style="transition-delay:80ms">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Desktop Software</h3>
+                    <p>Powerful macOS applications designed for productivity, creativity, and daily workflows — respecting native platform conventions.</p>
+                </div>
+                <div class="expertise-card fade-in" style="transition-delay:160ms">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Human-centered design with attention to detail — fluid animations, accessible layouts, and interfaces that feel alive.</p>
+                </div>
+                <div class="expertise-card fade-in" style="transition-delay:240ms">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3>Web Applications</h3>
+                    <p>Responsive web platforms and tools — from corporate websites to full-stack SaaS applications with modern frameworks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="section-grid reverse">
+                <div class="section-image fade-in">
+                    <img src="assets/products.png" alt="Mayone product portfolio">
+                </div>
+                <div class="section-text fade-in">
+                    <p class="eyebrow">Our Products</p>
+                    <h2>A growing ecosystem.</h2>
+                    <p class="body-text">We develop and maintain a portfolio of apps spanning productivity, utilities, and creative tools — available on the App Store, Mac App Store, and the web.</p>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <span class="product-name">DuoView</span>
+                            <span class="product-desc">Multi-mode workspace browser for iOS</span>
+                        </div>
+                        <div class="product-item">
+                            <span class="product-name">DuoSpace</span>
+                            <span class="product-desc">Smart app workspace organizer</span>
+                        </div>
+                        <div class="product-item">
+                            <span class="product-name">ZenSpace</span>
+                            <span class="product-desc">Ambient productivity tool for macOS</span>
+                        </div>
+                        <div class="product-item">
+                            <span class="product-name">Screendingo</span>
+                            <span class="product-desc">Real-time on-screen translation</span>
+                        </div>
+                        <div class="product-item">
+                            <span class="product-name">SafeRoom</span>
+                            <span class="product-desc">Hidden camera detection scanner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Culture Section -->
+        <section id="culture" class="culture-section">
+            <div class="section-header fade-in">
+                <p class="eyebrow">Our Culture</p>
+                <h2>How we work</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card fade-in">
+                    <span class="value-number">01</span>
+                    <h3>Craft Over Speed</h3>
+                    <p>We take the time to get things right. Every detail matters — from typography to performance to accessibility.</p>
+                </div>
+                <div class="value-card fade-in" style="transition-delay:80ms">
+                    <span class="value-number">02</span>
+                    <h3>Ship & Iterate</h3>
+                    <p>We believe in launching, learning, and improving. Perfect is the enemy of done — but "done" should still be excellent.</p>
+                </div>
+                <div class="value-card fade-in" style="transition-delay:160ms">
+                    <span class="value-number">03</span>
+                    <h3>User-Obsessed</h3>
+                    <p>Every decision starts with the question: "Does this make the user's life better?" If not, we rethink it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / CTA -->
+        <section id="contact" class="contact-section">
+            <div class="contact-card fade-in">
+                <h2>Let's work together.</h2>
+                <p>Whether you're looking for a technology partner, want to collaborate, or are interested in joining our team — we'd love to hear from you.</p>
+                <div class="contact-actions">
+                    <a href="mailto:mayoneltd2026@gmail.com" class="btn btn-primary btn-lg">mayoneltd2026@gmail.com</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 32V12L20 24L32 12V32" stroke="url(#footer_grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="footer_grad" x1="8" y1="12" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#3b82f6"/>
+                                <stop offset="1" stop-color="#8b5cf6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <p class="footer-tagline">Building software people love.</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#expertise">What We Do</a>
+                        <a href="#products">Products</a>
+                        <a href="#culture">Culture</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms of Use</a>
+                        <a href="/eula">Apple EULA</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <a href="mailto:mayoneltd2026@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mayone Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
