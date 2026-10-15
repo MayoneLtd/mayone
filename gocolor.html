@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go.Color: Pixel by Number — Official App Download | Mayone</title>
+    <meta name="description" content="Download Go.Color: Pixel by Number on Google Play. Relax and unwind with 1,000+ adorable pixel art pieces, daily updates, anime art, animals, mandalas, and anti-stress coloring.">
+    <meta name="keywords" content="Go.Color, Pixel by Number, Pixel Art, Color by Number, Coloring Game, Relaxing Game, Anti Stress, Mayone, Android Game">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hndoorjsc.dev/gocolor">
+    <meta property="og:title" content="Go.Color: Pixel by Number — Relaxing Coloring Game">
+    <meta property="og:description" content="Color by numbers and create stunning pixel art pieces. Download free on Google Play.">
+    <meta property="og:image" content="https://hndoorjsc.dev/assets/gocolor_icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --brand-primary: #f59e0b;
+            --brand-gradient: linear-gradient(135deg, #f59e0b 0%, #ec4899 50%, #8b5cf6 100%);
+            --brand-hero-bg: radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.15) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 80%);
+        }
+
+        .app-hero {
+            position: relative;
+            padding: 60px 24px 80px;
+            background: var(--brand-hero-bg);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .app-hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .app-icon-wrapper {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 24px;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(245, 158, 11, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            background: #fff;
+            transition: transform 0.4s var(--ease);
+        }
+
+        .app-icon-wrapper:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .app-icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 999px;
+            color: #fbbf24;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .app-title {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            background: linear-gradient(180deg, #ffffff 40%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .app-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 660px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .app-meta-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .meta-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .meta-stat .stat-val {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .meta-stat .stat-lbl {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .app-cta-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .btn-google-play {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 28px;
+            background: #ffffff;
+            color: #0b0b0f;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s var(--ease);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-google-play:hover {
+            transform: translateY(-2px);
+            background: #f1f5f9;
+            box-shadow: 0 16px 32px rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-google-play svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .play-btn-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            line-height: 1.15;
+        }
+
+        .play-btn-text .subtext {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .play-btn-text .maintext {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .app-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1120px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            transition: all 0.3s var(--ease);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(245, 158, 11, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon-bubble {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: rgba(245, 158, 11, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: 1.35rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .download-box {
+            max-width: 860px;
+            margin: 80px auto;
+            padding: 56px 36px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            position: relative;
+        }
+
+        .download-box h2 {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 14px;
+        }
+
+        .specs-table {
+            max-width: 700px;
+            margin: 40px auto 0;
+            border-collapse: collapse;
+            width: 100%;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .specs-table td {
+            padding: 12px 16px;
+            color: var(--text-secondary);
+        }
+
+        .specs-table td:first-child {
+            font-weight: 600;
+            color: var(--text-primary);
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <!-- Hero: App Overview -->
+        <section class="app-hero">
+            <div class="app-hero-container">
+                <div class="app-icon-wrapper">
+                    <img src="assets/gocolor_icon.png" alt="Go.Color: Pixel by Number App Icon">
+                </div>
+
+                <div class="app-badge-pill">
+                    <span>✨ #1 Casual Pixel Art Coloring Game</span>
+                </div>
+
+                <h1 class="app-title">Go.Color: Pixel by Number</h1>
+                <p class="app-subtitle">
+                    Immerse yourself in a world of soothing pixel art. Choose from 1,000+ adorable artworks, follow the numbers, and watch beautiful masterpieces come alive tap by tap.
+                </p>
+
+                <!-- Stats Bar -->
+                <div class="app-meta-stats">
+                    <div class="meta-stat">
+                        <span class="stat-val">4.8 ⭐</span>
+                        <span class="stat-lbl">Rating</span>
+                    </div>
+                    <div class="meta-stat">
+                        <span class="stat-val">1,000+</span>
+                        <span class="stat-lbl">Artworks</span>
+                    </div>
+                    <div class="meta-stat">
+                        <span class="stat-val">3+</span>
+                        <span class="stat-lbl">Everyone</span>
+                    </div>
+                    <div class="meta-stat">
+                        <span class="stat-val">Free</span>
+                        <span class="stat-lbl">Install</span>
+                    </div>
+                </div>
+
+                <!-- Google Play CTA Button -->
+                <div class="app-cta-row">
+                    <a href="https://play.google.com/store/apps/details?id=com.mayone.pixelartpaint" target="_blank" rel="noopener noreferrer" class="btn-google-play">
+                        <svg viewBox="0 0 512 512">
+                            <path fill="#4285F4" d="M32.5 28.5L260.8 256.8 32.5 485.1c-4.4-4.8-7-11.2-7-18.4V46.9c0-7.2 2.6-13.6 7-18.4z"/>
+                            <path fill="#FBBC04" d="M344.6 172.9L260.8 256.8l83.8 83.9 98.7-56.9c16.3-9.4 16.3-24.8 0-34.2l-98.7-56.7z"/>
+                            <path fill="#EA4335" d="M32.5 28.5l228.3 228.3 83.8-83.9L108.8 38.6C89.6 27.5 56.4 22.1 32.5 28.5z"/>
+                            <path fill="#34A853" d="M32.5 485.1c23.9 6.4 57.1 1 76.3-10.1l235.8-134.3-83.8-83.9L32.5 485.1z"/>
+                        </svg>
+                        <div class="play-btn-text">
+                            <span class="subtext">Get It On</span>
+                            <span class="maintext">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-tertiary);">
+                    Compatible with Android phones & tablets. Safe and verified by Google Play Protect.
+                </p>
+            </div>
+        </section>
+
+        <!-- Highlights Grid -->
+        <section id="features" style="padding: 40px 0;">
+            <div style="text-align: center; max-width: 650px; margin: 0 auto 30px; padding: 0 24px;">
+                <p class="eyebrow">Highlights</p>
+                <h2 style="font-family: 'Fredoka', 'Inter', sans-serif;">Why players love Go.Color</h2>
+                <p class="section-desc">Designed with care to bring you relaxation, mindfulness, and creative joy every day.</p>
+            </div>
+
+            <div class="app-features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">🎨</div>
+                    <h3>1,000+ Diverse Artworks</h3>
+                    <p>Explore an enormous gallery spanning Anime, Chibi Animals, Floral Mandalas, Pop Art, Fantasy, and Cozy Architecture. Fresh paintings added daily!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">🧘</div>
+                    <h3>Anti-Stress & Mindfulness</h3>
+                    <p>Easy color-by-number mechanics that soothe your mind. No art skills required — just tap corresponding number cells to paint and unwind.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">🪄</div>
+                    <h3>Power-Up Coloring Tools</h3>
+                    <p>Breeze through complex pictures with Magic Wand, Color Splash Bomb, and Cell Locator to effortlessly find remaining hidden numbers.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">🎬</div>
+                    <h3>Timelapse Showcase</h3>
+                    <p>Watch a captivating video timelapse of your coloring process from first tap to finished masterpiece. Save and share easily with friends!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">🧩</div>
+                    <h3>Jigsaw & Mystery Modes</h3>
+                    <p>Collect puzzle pieces to assemble vibrant jigsaw stories, or uncover mysterious hidden illustrations as you color.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">📴</div>
+                    <h3>Color Anywhere Offline</h3>
+                    <p>Enjoy uninterrupted coloring on flights, commutes, or in cozy offline corners. Your progress always syncs safely to the cloud when online.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specifications Table -->
+        <section id="specs" style="padding: 20px 24px 60px;">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto 20px;">
+                <p class="eyebrow">App Specifications</p>
+                <h2 style="font-family: 'Fredoka', 'Inter', sans-serif; font-size: 1.8rem;">Technical Details</h2>
+            </div>
+
+            <table class="specs-table">
+                <tbody>
+                    <tr>
+                        <td>App Title</td>
+                        <td>Go.Color: Pixel by Number</td>
+                    </tr>
+                    <tr>
+                        <td>Package Name</td>
+                        <td><code>com.mayone.pixelartpaint</code></td>
+                    </tr>
+                    <tr>
+                        <td>Developer</td>
+                        <td>Nguyen Phan Ngoc Anh / Mayone Co., Ltd.</td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                        <td>Casual, Board, Color by Number</td>
+                    </tr>
+                    <tr>
+                        <td>Operating System</td>
+                        <td>Android 7.0 and up</td>
+                    </tr>
+                    <tr>
+                        <td>Content Rating</td>
+                        <td>Rated for 3+ (Suitable for all ages)</td>
+                    </tr>
+                    <tr>
+                        <td>Interactive Elements</td>
+                        <td>In-App Purchases (Digital Currency & VIP Pass)</td>
+                    </tr>
+                    <tr>
+                        <td>Official Store Link</td>
+                        <td><a href="https://play.google.com/store/apps/details?id=com.mayone.pixelartpaint" target="_blank" style="color: #60a5fa; text-decoration: underline;">Open on Google Play Store</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Final Download CTA -->
+        <section style="padding: 0 24px 80px;">
+            <div class="download-box">
+                <h2>Start Your Relaxing Coloring Journey</h2>
+                <p style="color: var(--text-secondary); max-width: 540px; margin: 0 auto 30px; font-size: 1.05rem;">
+                    Download Go.Color today and let peaceful colors melt away your daily stress. Completely free on Google Play!
+                </p>
+                <a href="https://play.google.com/store/apps/details?id=com.mayone.pixelartpaint" target="_blank" rel="noopener noreferrer" class="btn-google-play">
+                    <svg viewBox="0 0 512 512">
+                        <path fill="#4285F4" d="M32.5 28.5L260.8 256.8 32.5 485.1c-4.4-4.8-7-11.2-7-18.4V46.9c0-7.2 2.6-13.6 7-18.4z"/>
+                        <path fill="#FBBC04" d="M344.6 172.9L260.8 256.8l83.8 83.9 98.7-56.9c16.3-9.4 16.3-24.8 0-34.2l-98.7-56.7z"/>
+                        <path fill="#EA4335" d="M32.5 28.5l228.3 228.3 83.8-83.9L108.8 38.6C89.6 27.5 56.4 22.1 32.5 28.5z"/>
+                        <path fill="#34A853" d="M32.5 485.1c23.9 6.4 57.1 1 76.3-10.1l235.8-134.3-83.8-83.9L32.5 485.1z"/>
+                    </svg>
+                    <div class="play-btn-text">
+                        <span class="subtext">Get It On</span>
+                        <span class="maintext">Google Play</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom" style="border: none; padding-top: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <p>&copy; 2026 Mayone Co., Ltd. All rights reserved.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="/" style="color: var(--text-secondary); font-size: 0.9rem;">Home</a>
+                    <a href="/privacy" style="color: var(--text-secondary); font-size: 0.9rem;">Privacy Policy</a>
+                    <a href="/terms" style="color: var(--text-secondary); font-size: 0.9rem;">Terms of Service</a>
+                    <a href="mailto:support@hndoorjsc.dev" style="color: var(--text-secondary); font-size: 0.9rem;">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
