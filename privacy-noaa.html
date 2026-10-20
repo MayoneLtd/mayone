@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - NOAA Weather: Live Radar & Alerts | Mayone Co., Ltd.</title>
+    <link rel="icon" type="image/png" href="noaa_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar" class="navbar scrolled">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 32V12L20 24L32 12V32" stroke="url(#logo_grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="logo_grad" x1="8" y1="12" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3b82f6"/>
+                            <stop offset="1" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">Mayone</span>
+            </a>
+            <ul id="nav-menu" class="nav-links">
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#expertise">What We Do</a></li>
+                <li><a href="/#products">Products</a></li>
+                <li><a href="/noaa">NOAA App</a></li>
+                <li><a href="/#contact" class="btn btn-outline btn-sm">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="legal-page">
+        <div class="legal-content fade-in visible">
+            <h1>Privacy Policy</h1>
+            <span class="last-updated">Last Updated: October 2026</span>
+
+            <!-- Official Store Listing & Identity Notice for Google Play Compliance -->
+            <div style="background: rgba(2, 132, 199, 0.08); border-left: 4px solid #0284c7; padding: 20px; margin: 24px 0 32px; border-radius: 12px; line-height: 1.6; display: flex; align-items: flex-start; gap: 20px;">
+                <img src="noaa_icon.png" alt="NOAA Weather App Icon" style="width: 72px; height: 72px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); flex-shrink: 0; margin-top: 4px;">
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0; margin-bottom: 8px; color: #0284c7; font-size: 1.15rem;">Application &amp; Developer Identification</h3>
+                    <p style="margin: 4px 0;"><strong>Application Name:</strong> NOAA Weather: Live Radar &amp; Alerts (also listed as NOAA Weather)</p>
+                    <p style="margin: 4px 0;"><strong>Package Name / Application ID:</strong> <code>com.mayone.noaaweather</code></p>
+                    <p style="margin: 4px 0;"><strong>Developer / Publishing Entity:</strong> Mayone Co., Ltd.</p>
+                    <p style="margin: 4px 0;"><strong>Store Listing Platform:</strong> Google Play Store</p>
+                    <p style="margin: 4px 0;"><strong>Official Support Contacts:</strong> <a href="mailto:mayoneltd2026@gmail.com" style="color: #0284c7;">mayoneltd2026@gmail.com</a> | <a href="mailto:npngocanh228@gmail.com" style="color: #0284c7;">npngocanh228@gmail.com</a></p>
+                </div>
+            </div>
+
+            <p>
+                This Privacy Policy specifically governs the mobile application <strong>NOAA Weather: Live Radar &amp; Alerts</strong> ("NOAA Weather", the "App"), developed and published by <strong>Mayone Co., Ltd.</strong> ("Company", "we", "us", or "our"), a company registered under the laws of Vietnam.
+            </p>
+            <p>
+                We are dedicated to safeguarding your privacy and ensuring transparent data practices. This policy details how our application handles location data, device diagnostics, and optional subscriptions in full compliance with the Google Play Developer Program Policies (specifically User Data and Location Data policies), the General Data Protection Regulation (GDPR), and the California Consumer Privacy Act (CCPA).
+            </p>
+
+            <h2>1. Location Data Collection &amp; Use (Prominent Disclosure)</h2>
+            <p>
+                To provide accurate local atmospheric data, high-resolution Doppler radar maps, and life-saving severe storm warnings, <strong>NOAA Weather</strong> requests permission to access your device's geographical location:
+            </p>
+            <ul>
+                <li>
+                    <strong>(a) Approximate and Precise Location (ACCESS_COARSE_LOCATION &amp; ACCESS_FINE_LOCATION):</strong> When you grant location access, the App uses your coordinates solely while the App is in use to fetch local radar tiles from the nearest National Weather Service (NOAA) Doppler station, pinpoint current temperature, display local precipitation probabilities, and notify you of nearby flash flood, hurricane, or tornado warnings.
+                </li>
+                <li>
+                    <strong>(b) Strict Privacy Protections for Location Data:</strong> 
+                    <ul style="margin-top: 6px; margin-bottom: 6px;">
+                        <li>We do <strong>NOT</strong> track your location continuously in the background for advertising purposes.</li>
+                        <li>We do <strong>NOT</strong> sell, license, or share your precise location coordinates with data brokers or marketing intermediaries.</li>
+                        <li>Location coordinates are transmitted over encrypted TLS/HTTPS connections directly to atmospheric weather API servers solely for the fulfillment of weather forecast queries.</li>
+                        <li>You may deny location permissions at any time through your Android system settings and manually search and bookmark cities by name or postal code without granting GPS permissions.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>2. Other Information We Collect &amp; Permissions</h2>
+            <ul>
+                <li>
+                    <strong>(a) Push Notifications (POST_NOTIFICATIONS):</strong> Used exclusively to deliver time-sensitive severe weather alerts, lightning proximity warnings, and daily weather forecast summaries. You can toggle or customize alert categories at any time in the in-app Settings menu.
+                </li>
+                <li>
+                    <strong>(b) Device Diagnostics &amp; Crash Reports:</strong> Non-personally identifiable diagnostic information (such as Android OS version, device model, crash logs, and aggregated screen interaction metrics) is collected via Firebase Crashlytics to detect software bugs and optimize map rendering speed.
+                </li>
+                <li>
+                    <strong>(c) In-App Purchases (BILLING):</strong> Premium subscriptions (ad-free experience, extended forecasts, and specialized hurricane layers) are processed directly and securely by the <strong>Google Play In-App Billing</strong> system. We never access or store your financial payment credentials.
+                </li>
+            </ul>
+
+            <h2>3. Third-Party Services &amp; Advertising</h2>
+            <p>
+                Our application integrates trusted third-party SDKs that comply strictly with Google Play security and privacy standards:
+            </p>
+            <ul>
+                <li>
+                    <strong>Google Play Services &amp; In-App Billing:</strong> Handles app distribution, authentication, and secure digital purchases. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--accent-hover); text-decoration: underline;">Google Privacy Policy</a>)
+                </li>
+                <li>
+                    <strong>Google Analytics for Firebase &amp; Crashlytics:</strong> Collects aggregated, anonymized telemetry to help our engineering team diagnose performance bottlenecks and crashes.
+                </li>
+                <li>
+                    <strong>NOAA &amp; Open Atmospheric APIs:</strong> Public meteorological data feeds utilized to render radar animations, satellite layers, and storm track polygons.
+                </li>
+            </ul>
+
+            <h2>4. Children’s Privacy (COPPA &amp; GDPR Compliance)</h2>
+            <p>
+                <strong>NOAA Weather</strong> is designed for a general audience. We do not knowingly solicit, collect, or store personal information from children under the age of 13. If you believe that a minor has provided us with personal information without parental consent, please contact us immediately at <a href="mailto:mayoneltd2026@gmail.com" style="color: var(--accent-hover); text-decoration: underline;">mayoneltd2026@gmail.com</a>, and we will promptly delete any associated records.
+            </p>
+
+            <h2>5. Data Retention, Security &amp; User Rights</h2>
+            <p>
+                We apply modern industry-standard encryption protocols (HTTPS/TLS) for all data in transit. Because your saved favorite locations and custom weather settings are stored locally on your device, you can erase all local data instantly by clearing the app data in Android Settings or by uninstalling the application.
+            </p>
+            <p>
+                If you have submitted inquiries or feedback to our support team and wish to exercise your GDPR/CCPA rights to request access, correction, or permanent deletion of your contact data, please send an email to <a href="mailto:mayoneltd2026@gmail.com" style="color: var(--accent-hover); text-decoration: underline;"><strong>mayoneltd2026@gmail.com</strong></a> or <a href="mailto:npngocanh228@gmail.com" style="color: var(--accent-hover); text-decoration: underline;"><strong>npngocanh228@gmail.com</strong></a>. We will process and confirm your request within 30 days.
+            </p>
+
+            <h2>6. Changes to This Privacy Policy</h2>
+            <p>
+                We may periodically revise this Privacy Policy to reflect application updates or evolving legal requirements. Any changes will be published directly to this page with an updated "Last Updated" timestamp. We recommend checking this page periodically to stay informed.
+            </p>
+
+            <h2>7. Contact Information &amp; Legal Entity</h2>
+            <p>
+                If you have any questions, suggestions, or concerns regarding this Privacy Policy or NOAA Weather's data practices, please reach out to us:
+            </p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li>🏢 <strong>Entity Name:</strong> Mayone Co., Ltd.</li>
+                <li>📱 <strong>Application:</strong> NOAA Weather: Live Radar &amp; Alerts</li>
+                <li>📧 <strong>Primary Email:</strong> <a href="mailto:mayoneltd2026@gmail.com" style="color: var(--accent-hover);">mayoneltd2026@gmail.com</a></li>
+                <li>📧 <strong>Support Email:</strong> <a href="mailto:npngocanh228@gmail.com" style="color: var(--accent-hover);">npngocanh228@gmail.com</a></li>
+                <li>🌐 <strong>Official Website:</strong> <a href="https://mayone.vercel.app" target="_blank" rel="noopener noreferrer" style="color: var(--accent-hover);">https://mayone.vercel.app</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mayone Co., Ltd. All rights reserved. · <a href="/noaa" style="color:var(--text-secondary);">NOAA App</a> · <a href="/privacy" style="color:var(--text-secondary);">General Privacy</a> · <a href="/terms" style="color:var(--text-secondary);">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

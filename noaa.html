@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOAA Weather: Live Radar & Alerts — Official App Download | Mayone</title>
+    <meta name="description" content="Download NOAA Weather: Live Radar & Alerts on Google Play. Real-time high-resolution Doppler radar, severe weather warnings, hurricane tracker, and accurate 10-day local forecasts.">
+    <meta name="keywords" content="NOAA Weather, Weather Radar, Live Radar, Severe Weather Alerts, Hurricane Tracker, Storm Tracker, Rain Radar, Doppler Radar, Mayone, Android App">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mayone.vercel.app/noaa">
+    <meta property="og:title" content="NOAA Weather: Live Radar & Alerts — Real-Time Weather Radar">
+    <meta property="og:description" content="High-resolution Doppler radar, hurricane tracker, severe storm alerts, and 10-day local forecasts. Download free on Google Play.">
+    <meta property="og:image" content="https://mayone.vercel.app/noaa_icon.png">
+
+    <link rel="icon" type="image/png" href="noaa_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --brand-primary: #0284c7;
+            --brand-gradient: linear-gradient(135deg, #0284c7 0%, #06b6d4 50%, #3b82f6 100%);
+            --brand-hero-bg: radial-gradient(circle at 50% 20%, rgba(2, 132, 199, 0.22) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 80%);
+        }
+
+        .app-hero {
+            position: relative;
+            padding: 70px 24px 80px;
+            background: var(--brand-hero-bg);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .app-hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .app-icon-wrapper {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 24px;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(2, 132, 199, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.15);
+            overflow: hidden;
+            background: #0f172a;
+            transition: transform 0.4s var(--ease);
+        }
+
+        .app-icon-wrapper:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .app-icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            background: rgba(2, 132, 199, 0.15);
+            border: 1px solid rgba(2, 132, 199, 0.35);
+            border-radius: 999px;
+            color: #38bdf8;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .app-title {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            background: linear-gradient(180deg, #ffffff 40%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .app-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .app-meta-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .meta-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .meta-stat .stat-val {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .meta-stat .stat-lbl {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .app-cta-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .btn-google-play {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 28px;
+            background: #ffffff;
+            color: #0b0b0f;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s var(--ease);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+            text-decoration: none;
+        }
+
+        .btn-google-play:hover {
+            transform: translateY(-2px);
+            background: #f1f5f9;
+            box-shadow: 0 16px 32px rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-google-play svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .play-btn-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            line-height: 1.15;
+        }
+
+        .play-btn-text .subtext {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .play-btn-text .maintext {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .app-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1120px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(2, 132, 199, 0.5);
+        }
+
+        .feature-icon-bubble {
+            width: 56px;
+            height: 56px;
+            background: rgba(2, 132, 199, 0.12);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .specs-table {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .specs-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .specs-table td:first-child {
+            color: var(--text-secondary);
+            font-weight: 500;
+            width: 35%;
+        }
+
+        .specs-table td:last-child {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .download-box {
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border: 1px solid rgba(2, 132, 199, 0.3);
+            border-radius: var(--radius-lg);
+            padding: 60px 24px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .download-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar" class="navbar scrolled">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 32V12L20 24L32 12V32" stroke="url(#logo_grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="logo_grad" x1="8" y1="12" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3b82f6"/>
+                            <stop offset="1" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">Mayone</span>
+            </a>
+            <ul id="nav-menu" class="nav-links">
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#expertise">What We Do</a></li>
+                <li><a href="/#products">Products</a></li>
+                <li><a href="/privacy-noaa">Privacy Policy</a></li>
+                <li><a href="/#contact" class="btn btn-outline btn-sm">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- App Hero -->
+        <header class="app-hero">
+            <div class="app-hero-container">
+                <div class="app-icon-wrapper">
+                    <img src="noaa_icon.png" alt="NOAA Weather: Live Radar & Alerts App Icon">
+                </div>
+
+                <div class="app-badge-pill">
+                    <span>🛰️ High-Resolution NOAA Doppler Radar &amp; Weather Tracker</span>
+                </div>
+
+                <h1 class="app-title">NOAA Weather: Live Radar &amp; Alerts</h1>
+                <p class="app-subtitle">
+                    Stay ahead of severe weather with real-time interactive Doppler radar maps, hurricane and storm tracking, live precipitation layers, and pinpoint 10-day local forecasts.
+                </p>
+
+                <div class="app-meta-stats">
+                    <div class="meta-stat">
+                        <span class="stat-val">HD Radar</span>
+                        <span class="stat-lbl">Doppler Imagery</span>
+                    </div>
+                    <div class="stat-sep" style="width: 1px; height: 32px; background: var(--border);"></div>
+                    <div class="meta-stat">
+                        <span class="stat-val">Live Alerts</span>
+                        <span class="stat-lbl">Severe Warnings</span>
+                    </div>
+                    <div class="stat-sep" style="width: 1px; height: 32px; background: var(--border);"></div>
+                    <div class="meta-stat">
+                        <span class="stat-val">10-Day</span>
+                        <span class="stat-lbl">Local Forecast</span>
+                    </div>
+                    <div class="stat-sep" style="width: 1px; height: 32px; background: var(--border);"></div>
+                    <div class="meta-stat">
+                        <span class="stat-val">Hurricane</span>
+                        <span class="stat-lbl">Live Tracker</span>
+                    </div>
+                </div>
+
+                <div class="app-cta-row">
+                    <a href="https://play.google.com/store/apps/details?id=com.mayone.noaaweather" target="_blank" rel="noopener noreferrer" class="btn-google-play">
+                        <svg viewBox="0 0 512 512">
+                            <path fill="#4285F4" d="M32.5 28.5L260.8 256.8 32.5 485.1c-4.4-4.8-7-11.2-7-18.4V46.9c0-7.2 2.6-13.6 7-18.4z"/>
+                            <path fill="#FBBC04" d="M344.6 172.9L260.8 256.8l83.8 83.9 98.7-56.9c16.3-9.4 16.3-24.8 0-34.2l-98.7-56.7z"/>
+                            <path fill="#EA4335" d="M32.5 28.5l228.3 228.3 83.8-83.9L108.8 38.6C89.6 27.5 56.4 22.1 32.5 28.5z"/>
+                            <path fill="#34A853" d="M32.5 485.1c23.9 6.4 57.1 1 76.3-10.1l235.8-134.3-83.8-83.9L32.5 485.1z"/>
+                        </svg>
+                        <div class="play-btn-text">
+                            <span class="subtext">Get It On</span>
+                            <span class="maintext">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <a href="/privacy-noaa" style="display: inline-flex; align-items: center; gap: 8px; color: #38bdf8; font-weight: 600; font-size: 0.95rem; padding: 10px 22px; background: rgba(2, 132, 199, 0.12); border: 1px solid rgba(2, 132, 199, 0.35); border-radius: 999px; transition: all 0.25s ease; text-decoration: none;">
+                        <span>🛡️ Xem Chính Sách Quyền Riêng Tư (Privacy Policy) →</span>
+                    </a>
+                </div>
+
+                <p style="font-size: 0.85rem; color: var(--text-tertiary);">
+                    Compatible with Android phones &amp; tablets. Safe and verified by Google Play Protect.
+                </p>
+            </div>
+        </header>
+
+        <!-- Highlights Grid -->
+        <section id="features" style="padding: 40px 0;">
+            <div style="text-align: center; max-width: 650px; margin: 0 auto 30px; padding: 0 24px;">
+                <p class="eyebrow">Highlights</p>
+                <h2 style="font-family: 'Fredoka', 'Inter', sans-serif;">Key Weather Features</h2>
+                <p class="section-desc">Reliable atmospheric data powered by NOAA National Weather Service feeds and high-definition Doppler radar.</p>
+            </div>
+
+            <div class="app-features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">📡</div>
+                    <h3>Interactive Doppler Radar</h3>
+                    <p>Pan and zoom seamlessly across ultra-smooth animated radar loops showing rain, sleet, snow, and severe storm cell movements in real-time.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">⚡</div>
+                    <h3>Severe Weather Alerts</h3>
+                    <p>Instant official push notifications for Tornado Warnings, Severe Thunderstorms, Flash Floods, Gale Warnings, and Winter Storm Advisories.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">🌀</div>
+                    <h3>Live Hurricane Tracker</h3>
+                    <p>Track tropical depressions, storms, and hurricanes with projected cone paths, wind speed forecasts, and satellite cloud imagery.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">☀️</div>
+                    <h3>Precise Hourly &amp; 10-Day Forecast</h3>
+                    <p>Detailed temperature forecasts, "Feels Like" index, precipitation probability, humidity, barometric pressure, dew point, and UV index.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">🛰️</div>
+                    <h3>Multi-Layer Satellite Maps</h3>
+                    <p>Switch between High-Def Radar, Infrared Satellite Cloud Cover, Wind Stream vectors, and Surface Temperature heatmaps with one tap.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-bubble">📍</div>
+                    <h3>GPS Local Forecast &amp; Air Quality</h3>
+                    <p>Automatic location detection for quick weather updates wherever you travel, complete with comprehensive Air Quality Index (AQI) monitoring.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specifications Table -->
+        <section id="specs" style="padding: 20px 24px 60px;">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto 20px;">
+                <p class="eyebrow">App Specifications</p>
+                <h2 style="font-family: 'Fredoka', 'Inter', sans-serif; font-size: 1.8rem;">Technical Details</h2>
+            </div>
+
+            <table class="specs-table">
+                <tbody>
+                    <tr>
+                        <td>App Title</td>
+                        <td>NOAA Weather: Live Radar &amp; Alerts</td>
+                    </tr>
+                    <tr>
+                        <td>Package Name</td>
+                        <td><code>com.mayone.noaaweather</code></td>
+                    </tr>
+                    <tr>
+                        <td>Developer / Entity</td>
+                        <td>Mayone Co., Ltd.</td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                        <td>Weather</td>
+                    </tr>
+                    <tr>
+                        <td>Operating System</td>
+                        <td>Android 7.0 (API 24) and up</td>
+                    </tr>
+                    <tr>
+                        <td>Content Rating</td>
+                        <td>Rated for 3+ (Suitable for all ages)</td>
+                    </tr>
+                    <tr>
+                        <td>Interactive Elements</td>
+                        <td>Digital Purchases &amp; In-App VIP Subscriptions</td>
+                    </tr>
+                    <tr>
+                        <td>Privacy Policy</td>
+                        <td><a href="/privacy-noaa" style="color: #38bdf8; text-decoration: underline;">View NOAA Weather Privacy Policy</a></td>
+                    </tr>
+                    <tr>
+                        <td>Official Store Link</td>
+                        <td><a href="https://play.google.com/store/apps/details?id=com.mayone.noaaweather" target="_blank" style="color: #60a5fa; text-decoration: underline;">Open on Google Play Store</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Final Download CTA -->
+        <section style="padding: 0 24px 80px;">
+            <div class="download-box">
+                <h2>Never Get Caught Unprepared in the Storm</h2>
+                <p style="color: var(--text-secondary); max-width: 540px; margin: 0 auto 30px; font-size: 1.05rem;">
+                    Download NOAA Weather today for precision radar maps, life-saving severe storm warnings, and accurate local daily forecasts.
+                </p>
+                <a href="https://play.google.com/store/apps/details?id=com.mayone.noaaweather" target="_blank" rel="noopener noreferrer" class="btn-google-play">
+                    <svg viewBox="0 0 512 512">
+                        <path fill="#4285F4" d="M32.5 28.5L260.8 256.8 32.5 485.1c-4.4-4.8-7-11.2-7-18.4V46.9c0-7.2 2.6-13.6 7-18.4z"/>
+                        <path fill="#FBBC04" d="M344.6 172.9L260.8 256.8l83.8 83.9 98.7-56.9c16.3-9.4 16.3-24.8 0-34.2l-98.7-56.7z"/>
+                        <path fill="#EA4335" d="M32.5 28.5l228.3 228.3 83.8-83.9L108.8 38.6C89.6 27.5 56.4 22.1 32.5 28.5z"/>
+                        <path fill="#34A853" d="M32.5 485.1c23.9 6.4 57.1 1 76.3-10.1l235.8-134.3-83.8-83.9L32.5 485.1z"/>
+                    </svg>
+                    <div class="play-btn-text">
+                        <span class="subtext">Get It On</span>
+                        <span class="maintext">Google Play</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom" style="border: none; padding-top: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <p>&copy; 2026 Mayone Co., Ltd. All rights reserved.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="/" style="color: var(--text-secondary); font-size: 0.9rem;">Home</a>
+                    <a href="/privacy-noaa" style="color: var(--text-secondary); font-size: 0.9rem;">NOAA Privacy</a>
+                    <a href="/privacy" style="color: var(--text-secondary); font-size: 0.9rem;">General Privacy</a>
+                    <a href="/terms" style="color: var(--text-secondary); font-size: 0.9rem;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
