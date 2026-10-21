@@ -571,3 +571,60 @@ h3 { font-size: 1.2rem; margin-bottom: 8px; }
     .hero-scroll-hint { display: none; }
     .legal-content { padding: 28px; }
 }
+
+/* ===== Responsive Enhancements for Legal & Policy Pages ===== */
+.legal-content {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.legal-content code {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+.app-identity-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px;
+    margin: 24px 0 32px;
+    border-radius: 12px;
+    line-height: 1.6;
+}
+
+.app-identity-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    flex-shrink: 0;
+}
+
+.app-identity-info {
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    .legal-page {
+        padding: 90px 14px 50px;
+    }
+    .legal-content {
+        padding: 22px 16px;
+    }
+    .legal-content h1 {
+        font-size: 1.8rem;
+    }
+    .app-identity-card {
+        padding: 16px 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    .app-identity-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
